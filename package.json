@@ -1,0 +1,8 @@
+{
+  "name": "bcss2022-elevator",
+  "author": "Alesion30 <alesion90@gmail.com> (https://github.com/Alesion30)",
+  "packageManager": "yarn@3.2.0",
+  "engines": {
+    "node": "17.x.x"
+  }
+}
