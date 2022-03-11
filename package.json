@@ -3,7 +3,7 @@
   "author": "Alesion30 <alesion90@gmail.com> (https://github.com/Alesion30)",
   "scripts": {
     "format": "npm-run-all -p format:latex format:prettier",
-    "format:latex": "latexindent -w *.tex *.cls -l indentconfig.yaml -c backup -s",
+    "format:latex": "latexindent -w src/**/*.tex src/**/*.cls -l indentconfig.yaml -c backup -s",
     "format:prettier": "prettier -w ."
   },
   "devDependencies": {

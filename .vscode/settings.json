@@ -1,12 +1,20 @@
 {
-  // ---------- Editor ----------
-  "editor.wordWrap": "on",
-  // ---------- Language ----------
+  ////////////////////////////////////////////////////////////
+  // Language
+  ////////////////////////////////////////////////////////////
   "[latex]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "James-Yu.latex-workshop"
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.wordWrap": "on"
   },
-  // ---------- LaTeX Workshop ----------
+  "[tex]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.wordWrap": "on"
+  },
+  ////////////////////////////////////////////////////////////
+  // LaTeX Workshop
+  ////////////////////////////////////////////////////////////
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
@@ -33,7 +41,10 @@
     "*.dvi",
     "*.synctex.gz"
   ],
-  "latex-workshop.latex.outDir": "out",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.outDir": ".",
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk",
@@ -44,13 +55,13 @@
     {
       "name": "latexmk",
       "command": "latexmk",
-      "args": ["-silent", "-outdir=%OUTDIR%", "%DOC%"]
+      "args": ["-silent", "-outdir=%OUTDIR%", "-pdf", "%DOC%"]
     }
   ],
   "latex-workshop.latexindent.path": "latexindent",
   "latex-workshop.latexindent.args": [
     "%TMPFILE%",
-    "-c=backup",
+    // "-c=backup",
     "-l=indentconfig.yaml"
   ],
   "files.trimFinalNewlines": true,
