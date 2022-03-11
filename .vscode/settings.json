@@ -1,6 +1,11 @@
 {
   // ---------- Editor ----------
   "editor.wordWrap": "on",
+  // ---------- Language ----------
+  "[latex]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+  },
   // ---------- LaTeX Workshop ----------
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.clean.fileTypes": [
@@ -41,5 +46,13 @@
       "command": "latexmk",
       "args": ["-silent", "-outdir=%OUTDIR%", "%DOC%"]
     }
-  ]
+  ],
+  "latex-workshop.latexindent.path": "latexindent",
+  "latex-workshop.latexindent.args": [
+    "%TMPFILE%",
+    "-c=backup",
+    "-l=indentconfig.yaml",
+  ],
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
 }
