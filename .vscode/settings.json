@@ -1,18 +1,6 @@
 {
   // ---------- Editor ----------
   "editor.wordWrap": "on",
-  // ---------- Language ----------
-  "[tex]": {
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.tabSize": 2
-  },
-  "[latex]": {
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.tabSize": 2
-  },
-  "[bibtex]": {
-    "editor.tabSize": 2
-  },
   // ---------- LaTeX Workshop ----------
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.clean.fileTypes": [
