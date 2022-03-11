@@ -5,6 +5,13 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@types/prettier@npm:^2.2.0":
+  version: 2.4.4
+  resolution: "@types/prettier@npm:2.4.4"
+  checksum: 2c2cc57efd49c7d8907415a72f96c84a6dd8696dd3bf8aa4ca3a667427bebf71cbfbc912673624bdfc935d272d1c008c639cf155f6449315990a4dc110f0d216
+  languageName: node
+  linkType: hard
+
 "ansi-styles@npm:^3.2.1":
   version: 3.2.1
   resolution: "ansi-styles@npm:3.2.1"
@@ -27,6 +34,7 @@ __metadata:
   dependencies:
     npm-run-all: ^4.1.5
     prettier: ^2.5.1
+    prettier-plugin-sort-json: ^0.0.2
   languageName: unknown
   linkType: soft
 
@@ -518,6 +526,17 @@ __metadata:
   version: 3.0.0
   resolution: "pify@npm:3.0.0"
   checksum: 6cdcbc3567d5c412450c53261a3f10991665d660961e06605decf4544a61a97a54fefe70a68d5c37080ff9d6f4cf51444c90198d1ba9f9309a6c0d6e9f5c4fde
+  languageName: node
+  linkType: hard
+
+"prettier-plugin-sort-json@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "prettier-plugin-sort-json@npm:0.0.2"
+  dependencies:
+    "@types/prettier": ^2.2.0
+  peerDependencies:
+    prettier: ^2.1.0
+  checksum: 2ea84af329044dc5c8a60d16187dc64b47d7728463b07f6a6da03f63418e59b230b36651b366c1c18d3142372c4321b329abe173b1128b8497d9ae2ae5dc5e98
   languageName: node
   linkType: hard
 
