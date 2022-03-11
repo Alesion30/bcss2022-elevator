@@ -4,7 +4,7 @@
   // ---------- Language ----------
   "[latex]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
   },
   // ---------- LaTeX Workshop ----------
   "latex-workshop.intellisense.package.enabled": true,
@@ -51,8 +51,8 @@
   "latex-workshop.latexindent.args": [
     "%TMPFILE%",
     "-c=backup",
-    "-l=indentconfig.yaml",
+    "-l=indentconfig.yaml"
   ],
   "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
+  "files.trimTrailingWhitespace": true
 }
