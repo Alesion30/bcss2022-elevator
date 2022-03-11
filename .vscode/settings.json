@@ -16,6 +16,7 @@
   // LaTeX Workshop
   ////////////////////////////////////////////////////////////
   "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux",
     "*.bbl",
@@ -42,9 +43,8 @@
     "*.synctex.gz"
   ],
   "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.latex.autoClean.run": "onBuilt",
-  "latex-workshop.latex.outDir": ".",
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/out",
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk",
@@ -61,8 +61,8 @@
   "latex-workshop.latexindent.path": "latexindent",
   "latex-workshop.latexindent.args": [
     "%TMPFILE%",
-    // "-c=backup",
-    "-l=indentconfig.yaml"
+    "-c=%WORKSPACE_FOLDER%/backup",
+    "-l=%WORKSPACE_FOLDER%/indentconfig.yaml"
   ],
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true
