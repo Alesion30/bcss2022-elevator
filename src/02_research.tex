@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2. 関連研究
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Related Research}
+
+In designing a congestion visualization system, the process of determining the method for measuring and estimating the congestion level and the method for communicating and visualizing the congestion information to users is important. In this chapter, we will first discuss the research on congestion measurement and general services and researches on congestion visualization, and then we will discuss the status of this research, mentioning the efforts and current status of sensing using IoT(Internet of Things) in elevators. The comparison between the related work and our proposed system is summarized in Table \ref{table:related_work}.
+
+
+% 表:関連研究
+\begin{table*}[bt]
+\centering
+\caption{Summary of related research on crowded estimation and crowded visualization and our proposed system}
+\begin{tabular}{ccccc} \hline
+\textbf{Year} & 
+\textbf{Reference} &
+\textbf{Sensor} & % センサー
+\textbf{Target} & % 対象
+\textbf{User Burden} % ユーザーの負担
+\\
+\hline \hline
+2009 & \cite{research_elevator_camera} & Camera & Elevator users & - \\
+2014 & \cite{research_camera} & Camera & People and Crowds & - \\
+2016 & \cite{komai2016beacon} & BLE & \begin{tabular}{c}People in \\ elderly facilities\end{tabular} & Have a BLE beacon \\
+2016 & \cite{komai2016elderly} & BLE & \begin{tabular}{c}People in \\ elderly facilities\end{tabular} & Have a BLE beacon \\
+2018 & \cite{umeki2018real} & BLE & Sightseer & Have a BLE beacon \\
+2019 & \cite{misc/26987957} & BLE \& WiFi & Sightseer & Install Application \\
+2020 & \cite{research_itocon} & BLE \& WiFi & People and Crowds & - \\
+2020 & \cite{ipsj-taikai-2020-matsumoto} & WiFi & People in the room & - \\
+2021 & \cite{kanamitu-2021-dicomo} & BLE & Bus users & Install COCOA \\
+2021 & \cite{kajima} & Camera \& BLE & Elevator users & Install Application \\
+2021 & \cite{elenavi} & - & Elevator users & - \\
+2021 & \begin{tabular}{c}our proposed \\ system\end{tabular} & BLE & Elevator users & Install COCOA \\
+\hline
+\end{tabular}
+\label{table:related_work}
+\end{table*}
+
+
+% 混雑度計測に関する研究
+\subsection{Research on congestion measurement}
+
+A method to detect crowds by image processing using a camera has been proposed\cite{research_camera}. When using a camera, privacy must be taken into account. In addition, since power supply is often unavailable in elevators, it is difficult to operate the camera method on battery power all day long due to power consumption issues.
+As a low power consumption method for measuring congestion, we have developed a method using WiFi CSI (Channel State Information) \cite{ipsj-taikai-2020-matsumoto} and a method for estimating congestion based on the RSSI distribution of BLE signals \cite{misc/26987957}\cite{umeki2018real}. However, all of them measure the degree of congestion in the target environment from the attenuation of radio waves by installing transmitters and receivers across the measurement environment, which requires a large indoor or outdoor space or installing devices in opposite directions. 
+
+In this study, we apply a method that utilizes signals transmitted by COCOA, the Contact-Confirming Application in Japan, which is based on ''exposure notification system'' codeveloped by Google and Apple. Exposure Notification is a decentralized reporting based protocol built on a combination of Bluetooth Low Energy technology and privacy-preserving cryptography. In recent smartphone operating systems, background operation is severely restricted, so it is no longer possible to create applications that continuously transmit BLE signals. Even if it were possible, it would be difficult to have a large number of people install it. COCOA, on the other hand, has already been installed by a certain number of people, and continuous background operation is specially permitted for iOS and Android.
+
+Examples of the use of COCOA to measure congestion include the campus congestion visualization system itocon, which has been in operation in our laboratory since June 2020, \cite{research_itocon}, and an example of its use for sensing congestion in a bus \cite{kanamitu-2021-dicomo}. In this method, only one device needs to be installed in the environment, and no application needs to be installed on the user side. The disadvantage is that not all users have COCOA installed.
+
+
+% 混雑度可視化に関するサービスや研究
+\subsection{Services and research on congestion visualization}
+
+Congestion visualization can be summarized in terms of macro and micro. From the macroscopic perspective, Google Maps and Yahoo! Map applications have started around 2015. These services were discontinued in January 2020, but have been revived again due to the Corona disaster. These services are measured based on the information of the users of Google and Yahoo! In order to visualize the degree of restraint in going out during the Corona disaster, congestion visualization services provided by cell phone companies, such as Docomo's Mobile Spatial Statistics and Softbank's Agoop, are also gaining recognition. These services visualize the rough congestion level on a 500m mesh scale.
+
+From a microscopic point of view, the Corona disaster has made it possible to display train congestion levels in transfer guides \footnote{The ''Congestion Forecast'' function, which allows you to quickly understand the trend of train congestion, is now available~\url{https://blog-transit.yahoo.co.jp/info/20200601.html}}. As for the level of congestion per store, a company called VACAN\footnote{VACAN~\url{https://corp.vacan.com/}} has emerged. 
+
+However, since only the users in the building need the information about the elevators, it seems that no one other than the elevator companies measure or visualize the congestion level.
+
+
+% エレベータにおけるIoTを用いたセンシングの取り組みと現状
+\subsection{Approaches of IoT-Based Sensing in Elevators}
+
+Some of the latest elevators are already equipped with signage that measures the number of people using cameras and weight scales, and displays the number of people in the elevator and the images from the cameras to people waiting for the elevator. However, most ordinary elevators are not equipped with such signage. Also, elevators cannot be replaced easily, so it is difficult to install them except in the latest buildings or commercial facilities. Furthermore, even in the latest buildings, such high-end elevators are not always installed due to cost and demand issues. In fact, Ito Campus of Kyushu University started construction in 2005, but at present (November 2021), we cannot find any high-end elevator with signage installed in the campus. In the case of apartments, cameras are installed in the elevators for the purpose of monitoring suspicious persons, and there are displays in the elevator halls that show the images from the cameras. While we may spend a lot of money for security, we do not often spend a lot of money to install signage to relieve congestion.
+
+
+% 本研究の位置付け
+\subsection{The position of this research}
+
+This research aims to realize a status sensing and visualization system that can be retrofitted and easily installed in existing popular elevator systems. Although not included in this paper, we aim to support decision making, such as choosing to use the stairs instead of waiting for the train to board, and is not intended to be applied to high-rise buildings, but to buildings with a height that can be reached by stairs.
