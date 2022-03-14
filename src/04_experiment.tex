@@ -3,14 +3,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Behavior patterns of people using elevators and estimation of waiting time}
-In this chapter, we describe a method to estimate the behavior pattern and waiting time of elevator users based on the time-series RSSI data of BLE signals obtained from the system described in the previous chapter. 
+In this chapter, we describe a method to estimate the behavior pattern and waiting time of elevator users based on the time-series RSSI data of BLE signals obtained from the system described in the previous chapter.
 
 % 図:時系列RSSIデータ
 \begin{figure}[t]
-\centering
-\includegraphics[width=1.0\hsize]{img/ble_rssi_original.png}
-\caption{Time series RSSI data}
-\label{fig:ble_rssi_original}
+  \centering
+  \includegraphics[width=1.0\hsize]{img/ble_rssi_original.png}
+  \caption{Time series RSSI data}
+  \label{fig:ble_rssi_original}
 \end{figure}
 
 % 対象とするエレベータ利用者の行動パターン
@@ -19,12 +19,12 @@ In this chapter, we describe a method to estimate the behavior pattern and waiti
 The following four types of behavioral patterns of elevator users are targeted in this study.
 
 \begin{quote}
- \begin{itemize}
-  \item Board the elevator.
-  \item Exit the elevator.
-  \item Use stairs instead of elevators.
-  \item Passing in front of the elevator.
- \end{itemize}
+  \begin{itemize}
+    \item Board the elevator.
+    \item Exit the elevator.
+    \item Use stairs instead of elevators.
+    \item Passing in front of the elevator.
+  \end{itemize}
 \end{quote}
 
 % 行動パターンと待ち時間を推定するアルゴリズム
@@ -49,53 +49,53 @@ Based on the algorithm, the detection rate of boarding and alighting was 100\%. 
 
 % 表:実験の記録
 \begin{table*}[ht]
-\caption{Record of the experiment}
-\label{table:record_table}
-\begin{tabular}{c|ccc|c}
-\hline
-\textbf{\begin{tabular}{c}behavioral \\ pattern\end{tabular}} & 
-\textbf{\begin{tabular}{c}Time when \\ the elevator button \\ is pressed\end{tabular}} & 
-\textbf{\begin{tabular}{c}Time of \\ the elevator \\ ride\end{tabular}} & 
-\textbf{\begin{tabular}{c}Time \\ you got off \\ the elevator\end{tabular}} & 
-\textbf{\begin{tabular}{c}waiting \\ time\end{tabular}} \\
-\hline\hline
-Move from 9F to 1F & 15:10:31 & 15:11:01 & 15:11:22 & 30sec \\
-Move from 1F to 9F & 15:13:20 & 15:13:45 & 15:14:10 & 25sec \\
-Move from 9F to 1F & 15:16:32 & 15:16:50 & 15:17:22 & 18sec \\
-Move from 1F to 9F & 15:19:00 & 15:19:12 & 15:19:43 & 12sec \\
-Move from 9F to 1F & 15:23:17 & 15:23:58 & 15:24:34 & 41sec \\
-Move from 1F to 9F & 15:25:55 & 15:26:42 & 15:27:32 & 47sec \\
-\hline
-\end{tabular}
+  \caption{Record of the experiment}
+  \label{table:record_table}
+  \begin{tabular}{c|ccc|c}
+    \hline
+    \textbf{\begin{tabular}{c}behavioral \\ pattern\end{tabular}} &
+    \textbf{\begin{tabular}{c}Time when \\ the elevator button \\ is pressed\end{tabular}} &
+    \textbf{\begin{tabular}{c}Time of \\ the elevator \\ ride\end{tabular}} &
+    \textbf{\begin{tabular}{c}Time \\ you got off \\ the elevator\end{tabular}} &
+    \textbf{\begin{tabular}{c}waiting \\ time\end{tabular}}                                          \\
+    \hline\hline
+    Move from 9F to 1F                 & 15:10:31 & 15:11:01 & 15:11:22 & 30sec \\
+    Move from 1F to 9F                 & 15:13:20 & 15:13:45 & 15:14:10 & 25sec \\
+    Move from 9F to 1F                 & 15:16:32 & 15:16:50 & 15:17:22 & 18sec \\
+    Move from 1F to 9F                 & 15:19:00 & 15:19:12 & 15:19:43 & 12sec \\
+    Move from 9F to 1F                 & 15:23:17 & 15:23:58 & 15:24:34 & 41sec \\
+    Move from 1F to 9F                 & 15:25:55 & 15:26:42 & 15:27:32 & 47sec \\
+    \hline
+  \end{tabular}
 \end{table*}
 
 % 図:時系列RSSIデータと9Fでの待ち時間
 \begin{figure}[t]
-\centering
-\includegraphics[width=1.0\hsize]{img/ble_rssi_9f_wait.png}
-\caption{Time series RSSI data and waiting time at 9F and Actual waiting time}
-\label{fig:ble_rssi_9f_wait}
+  \centering
+  \includegraphics[width=1.0\hsize]{img/ble_rssi_9f_wait.png}
+  \caption{Time series RSSI data and waiting time at 9F and Actual waiting time}
+  \label{fig:ble_rssi_9f_wait}
 \end{figure}
 
 % 図:時系列RSSIデータと9Fでの待ち時間（推定値）
 \begin{figure}[t]
-\centering
-\includegraphics[width=1.0\hsize]{img/ble_rssi_9f_wait_guess.png}
-\caption{Time series RSSI data and waiting time at 9F and Estimated latency by algorithm}
-\label{fig:ble_rssi_9f_wait_quess}
+  \centering
+  \includegraphics[width=1.0\hsize]{img/ble_rssi_9f_wait_guess.png}
+  \caption{Time series RSSI data and waiting time at 9F and Estimated latency by algorithm}
+  \label{fig:ble_rssi_9f_wait_quess}
 \end{figure}
 
 % 表:アルゴリズムによる推定待ち時間
 \begin{table*}[ht]
-\caption{Estimated latency by algorithm}
-\label{table:record_table_guess}
-\centering
-\begin{tabular}{c|cc|c}
-\hline
-\textbf{behavioral pattern} & \textbf{$T_{start}$}  & \textbf{$T_{end}$} & \textbf{Estimated waiting time} \\ \hline\hline
-Take the right elevator. & 15:10:40 & 15:11:10 & 30sec \\
-Take the right elevator. & 15:16:32 & 15:16:52 & 20sec \\
-Take the right elevator. & 15:23:24 & 15:24:04 & 40sec \\
-\hline
-\end{tabular}
+  \caption{Estimated latency by algorithm}
+  \label{table:record_table_guess}
+  \centering
+  \begin{tabular}{c|cc|c}
+    \hline
+    \textbf{behavioral pattern} & \textbf{$T_{start}$} & \textbf{$T_{end}$} & \textbf{Estimated waiting time} \\ \hline\hline
+    Take the right elevator.    & 15:10:40             & 15:11:10           & 30sec                           \\
+    Take the right elevator.    & 15:16:32             & 15:16:52           & 20sec                           \\
+    Take the right elevator.    & 15:23:24             & 15:24:04           & 40sec                           \\
+    \hline
+  \end{tabular}
 \end{table*}
