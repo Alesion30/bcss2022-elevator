@@ -42,6 +42,9 @@ In designing a congestion visualization system, the process of determining the m
 A method to detect crowds by image processing using a camera has been proposed\cite{research_camera}. When using a camera, privacy must be taken into account. In addition, since power supply is often unavailable in elevators, it is difficult to operate the camera method on battery power all day long due to power consumption issues.
 As a low power consumption method for measuring congestion, we have developed a method using WiFi CSI (Channel State Information) \cite{ipsj-taikai-2020-matsumoto} and a method for estimating congestion based on the RSSI distribution of BLE signals \cite{misc/26987957}\cite{umeki2018real}. However, all of them measure the degree of congestion in the target environment from the attenuation of radio waves by installing transmitters and receivers across the measurement environment, which requires a large indoor or outdoor space or installing devices in opposite directions.
 
+% MARK: don't show footnote
+\thispagestyle{kisuu}
+
 In this study, we apply a method that utilizes signals transmitted by COCOA, the Contact-Confirming Application in Japan, which is based on ''exposure notification system'' codeveloped by Google and Apple. Exposure Notification is a decentralized reporting based protocol built on a combination of Bluetooth Low Energy technology and privacy-preserving cryptography. In recent smartphone operating systems, background operation is severely restricted, so it is no longer possible to create applications that continuously transmit BLE signals. Even if it were possible, it would be difficult to have a large number of people install it. COCOA, on the other hand, has already been installed by a certain number of people, and continuous background operation is specially permitted for iOS and Android.
 
 Examples of the use of COCOA to measure congestion include the campus congestion visualization system itocon, which has been in operation in our laboratory since June 2020, \cite{research_itocon}, and an example of its use for sensing congestion in a bus \cite{kanamitu-2021-dicomo}. In this method, only one device needs to be installed in the environment, and no application needs to be installed on the user side. The disadvantage is that not all users have COCOA installed.
@@ -51,6 +54,9 @@ Examples of the use of COCOA to measure congestion include the campus congestion
 \subsection{Services and research on congestion visualization}
 
 Congestion visualization can be summarized in terms of macro and micro. From the macroscopic perspective, Google Maps and Yahoo! Map applications have started around 2015. These services were discontinued in January 2020, but have been revived again due to the Corona disaster. These services are measured based on the information of the users of Google and Yahoo! In order to visualize the degree of restraint in going out during the Corona disaster, congestion visualization services provided by cell phone companies, such as Docomo's Mobile Spatial Statistics and Softbank's Agoop, are also gaining recognition. These services visualize the rough congestion level on a 500m mesh scale.
+
+% MARK: don't show footnote
+\thispagestyle{guusuu}
 
 From a microscopic point of view, the Corona disaster has made it possible to display train congestion levels in transfer guides \footnote{The ''Congestion Forecast'' function, which allows you to quickly understand the trend of train congestion, is now available~\url{https://blog-transit.yahoo.co.jp/info/20200601.html}}. As for the level of congestion per store, a company called VACAN\footnote{VACAN~\url{https://corp.vacan.com/}} has emerged.
 

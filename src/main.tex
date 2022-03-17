@@ -2,15 +2,46 @@
 % LLNCS macro package for Springer Computer Science proceedings;
 % Version 2.20 of 2017/10/04
 \documentclass[runningheads]{llncs}
+
 \usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{bbding}
+\usepackage{color}
+\usepackage{authblk}
+\usepackage{blindtext}
+\usepackage{url}
+\usepackage{fancyhdr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ページスタイル
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{1pt}
+    \lhead{}
+    \chead{}
+    \rhead{}
+    \lfoot{\footnotesize\textit{Persuasive 2022, Adjunct Proceedings of the 17th International Conference on Persuasive Technology. Copyright © 2022 for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).}}
+    \cfoot{}
+    \rfoot{}
+
+\fancypagestyle{kisuu}{\lhead{}
+    \chead{}
+    \rhead{\thepage}
+    \fancyfoot{}
+    \renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{guusuu}{\lhead{\thepage\qquad\quad Y. Ohira et al.}
+    \chead{}
+    \rhead{}
+    \fancyfoot{}
+    \renewcommand{\footrulewidth}{0pt}}
+
 
 \begin{document}
 
 \title{
   Design and development of appendable elevator monitoring system to nudge people behavior change
-  % Appendable elevator monitoring system to nudge people behavior change
-  \thanks{This work was supported in part by JSPS Grant-in-Aid for Scientific Research JP18H03233 and NEDO Research and Development of My-IoT Development Platform (JPNP18014).}
-  \thanks{Persuasive 2022, Adjunct Proceedings of the 17th International Conference on Persuasive Technology. Copyright © 2022 for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0). }
 }
 
 \author{
@@ -28,12 +59,21 @@
 
 \maketitle
 
+% show footnote
+\thispagestyle{fancy}
+
 \input{00_abst}
 \input{01_intro}
 \input{02_research}
 \input{03_system}
 \input{04_experiment}
 \input{05_conclu}
+
+\subsubsection{Acknowledgements.}
+This work was supported in part by JSPS Grant-in-Aid for Scientific Research JP18H03233 and NEDO Research and Development of My-IoT Development Platform (JPNP18014).
+
+% MARK: don't show footnote
+\thispagestyle{guusuu}
 
 %
 % ---- Bibliography ----
@@ -49,6 +89,9 @@
 % ----------------------------------------------------------------
 % \bibliographystyle{splncs04}
 % \bibliography{myreference}
-\include{bib}
+\input{bib}
+
+% MARK: don't show footnote
+\thispagestyle{guusuu}
 
 \end{document}
