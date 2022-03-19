@@ -8,18 +8,21 @@ Due to the impact of the COVID-19, it is becoming more important to avoid the cr
 % 図:システム概要
 % TODO: 図中の説明は、英語のものに変更する
 \begin{figure}[t]
-\begin{center}
-\includegraphics[clip, width=1.0\hsize]{img/system.png}
-\caption{System Overview}
-\label{fig:system}
-\end{center}
+  \begin{center}
+    \includegraphics[clip, width=1.0\hsize]{img/system.png}
+    \caption{System Overview}
+    \label{fig:system}
+  \end{center}
 \end{figure}
 
 
 To solve these problems, a method of informing users of the congestion status of elevators through a smartphone application has been proposed by building company, kajima\cite{kajima}. The method using a smartphone application requires the user to install an application, which raises the hurdle to grasp the congestion information. In addition, kajima\cite{kajima} proposes a method for detecting passengers by using a camera as a method to grasp the congestion status in an elevator.
-Although the camera-based detection is highly accurate, there are some problems in terms of installation cost, such as privacy issues and the need to install a ceiling. In another approach, a gate is installed in front of the elevator and an ID card is scanned to allow the system to know the number of elevator users and their destinations, and to select the optimal elevator and timing for boarding\cite{elenavi}. Since the number of elevator users is controlled by the gate, it is easy to control the number of elevator users and to eliminate the congestion in the elevators. 
+Although the camera-based detection is highly accurate, there are some problems in terms of installation cost, such as privacy issues and the need to install a ceiling. In another approach, a gate is installed in front of the elevator and an ID card is scanned to allow the system to know the number of elevator users and their destinations, and to select the optimal elevator and timing for boarding\cite{elenavi}. Since the number of elevator users is controlled by the gate, it is easy to control the number of elevator users and to eliminate the congestion in the elevators.
 
-In this study, we propose a appendable system in which a tablet terminal is installed in front of the elevator to present the number of people in the elevator, the congestion status of each floor (Figure \ref{fig:system}). We believe that this system will solve the problem of not being able to grasp the status of other floors and the number of people in the elevator at the time when the elevator button is pressed, which is a problem unique to elevators. Compared with the method of having users install an application, this system allows users to easily obtain information on congestion, and thus encourages them to make decisions such as using the stairs or waiting for the next elevator before pressing the elevator button. 
+% MARK: don't show footnote
+\thispagestyle{guusuu}
+
+In this study, we propose a appendable system in which a tablet terminal is installed in front of the elevator to present the number of people in the elevator, the congestion status of each floor (Figure \ref{fig:system}). We believe that this system will solve the problem of not being able to grasp the status of other floors and the number of people in the elevator at the time when the elevator button is pressed, which is a problem unique to elevators. Compared with the method of having users install an application, this system allows users to easily obtain information on congestion, and thus encourages them to make decisions such as using the stairs or waiting for the next elevator before pressing the elevator button.
 
 As a part of the basic experiment, we also evaluated the continuous operation time and detection accuracy of the system, and estimated the behavior pattern and waiting time of the elevator users based on the RSSI time series data of BLE signals acquired from the system.
 
